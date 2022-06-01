@@ -1,0 +1,279 @@
+/* 
+
+--- 01 TYPOGRAPHY SYSTEM
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 
+/ 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+-- Font weights:
+Default: 400
+Medium: 500
+Semi-Bold: 600
+Bold: 700
+
+-- Line Heights: 
+Default: 1
+Small: 1.05
+Large: 1.8
+Paragraph Default: 1.06
+
+
+--- 02 COLORS
+
+Brand color: #e67e22
+
+Tints: #e98b38
+Shades: #45260a
+Accents:
+Greys: 
+#767676 (lughtesting grey allowed on #fff)
+#555
+#333
+#6F6F6F (Lightest)
+
+
+--- 05 SHADOWS
+
+--- 06 BORDER-RADIUS
+Default: 9px
+Medium: 11px
+
+--- 07 WHITESPACE
+
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 
+/ 80 / 96 / 128
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 0.8rem rgba(230, 125, 34, 0.5);
+}
+
+html {
+  /* font-size: 10px; */
+
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+
+  overflow-x: hidden;
+  font-size: 62.5%;
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #333;
+  overflow-x: hidden;
+}
+
+img {
+  pointer-events: none;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* *************************************** */
+/* GENERAL REUSABLE COMPONENTS */
+/* *************************************** */
+
+.heading-primary {
+  font-size: 4rem;
+  /* font-size: 4rem; */
+  font-weight: 700;
+  line-height: 1.05;
+  color: #333;
+  letter-spacing: -3.5px;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 1.9rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.title {
+  font-size: 4.4rem;
+  letter-spacing: -1.5px;
+  margin-bottom: 9.2rem;
+  line-height: 1.05;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem !important;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 4rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid-col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-col-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-center-v {
+  align-items: center;
+}
+
+.grid-center-h {
+  justify-items: center;
+}
+
+/* FLEXBOX */
+.flexbox {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* BUTTON  */
+
+.btn,
+.btn:link,
+.btn:visited {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  /* background-color: #e67e22; */
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  border: none;
+  display: inline-block;
+  /* PUT TRANSITION ON ORIGINAL BTN */
+  transition: background-color 0.3s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn-full:active,
+.btn-full:hover {
+  background-color: #cf711f;
+}
+.btn-outline:link,
+.btn-outline:visited {
+  color: #555;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.btn-outline:active,
+.btn-outline:hover {
+  background-color: #fdf2e9;
+  box-shadow: inset 0px 0px 0px 3px #fff;
+}
+
+.link:link,
+.link:visited {
+  text-decoration: none;
+  color: #e67e22;
+  font-weight: 500;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+
+.link:active,
+.link:hover {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.btn-form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn-form:hover {
+  background-color: #fff;
+  color: #555;
+}
+
+/* MOBILE BUTTON */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  stroke: none;
+  cursor: pointer;
+  display: none;
+}
+
+.btn-mobile-icon {
+  width: 4.8rem;
+  height: 4.8rem;
+  color: #333;
+}
+
+.btn-mobile-icon[name="close-outline"] {
+  display: none;
+}
+
+/* --------------------- */
+/* HELPER CLASSES */
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.text-center {
+  text-align: center;
+}
