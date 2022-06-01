@@ -217,7 +217,7 @@
   .btn-mobile-nav {
     display: block;
     /* box-shadow: none; */
-    z-index: 100;
+    z-index: 9999;
   }
 
   .nav-open .main-nav {
