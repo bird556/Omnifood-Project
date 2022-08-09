@@ -31,9 +31,6 @@
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
 }
 
-.main-nav {
-}
-
 .main-nav-list {
   list-style: none;
   display: flex;
@@ -198,9 +195,6 @@
   letter-spacing: 0.1px;
 }
 
-.step-text-box {
-}
-
 .step-number {
   font-size: 9.8rem;
   color: #dddddd;
@@ -228,7 +222,7 @@
 
 .step-img-box::before,
 .step-img-box::after {
-  content: "";
+  content: '';
   background-color: #fdf2e9;
   width: 60%;
   padding-bottom: 60%;
@@ -384,12 +378,6 @@
   padding: 9.6rem;
 }
 
-.feedback {
-}
-
-.feedback-box {
-}
-
 .feedback-img {
   height: 6.4rem;
   width: 6.4rem;
@@ -424,10 +412,15 @@
   padding: 1.6rem 9.6rem;
 }
 
+.gallery-item {
+  overflow: hidden;
+}
+
 .gallery-item img {
   display: block;
   width: 100%;
-  transition: all 0.5s;
+  transition: all 1s;
+  pointer-events: all;
 }
 
 .gallery-item img:hover {
@@ -435,9 +428,6 @@
   cursor: pointer;
 }
 
-.gallery-item {
-  overflow: hidden;
-}
 /* --------------------------------------- */
 /* *************************************** */
 /* ----------Section Pricing-------------- */
@@ -473,7 +463,7 @@
 }
 
 .pricing-plan-complete::after {
-  content: "Best Value";
+  content: 'Best Value';
   position: absolute;
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -527,8 +517,7 @@
 /* *************************************** */
 /* ---------- Feature -------------- */
 /* *************************************** */
-.feature {
-}
+
 .feature-icon {
   color: #e67e22;
   width: 3.2rem;
@@ -575,7 +564,7 @@
       rgba(235, 151, 78, 0.3),
       rgb(230, 125, 34, 0.3)
     ),
-    url("../content/img/eating.jpg");
+    url('../content/img/eating.jpg');
   background-size: cover;
   /* background-position: right; */
   background-repeat: no-repeat;
@@ -632,10 +621,6 @@
   color: #aaa;
 }
 
-.cta-form select {
-}
-.cta-form button {
-}
 .cta *:focus {
   box-shadow: 0 0 0 0.8rem rgba(255, 255, 255, 0.4);
 }
